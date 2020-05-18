@@ -1,0 +1,13 @@
+<h1>Welcome, <%= @user.username %></h1>
+
+<h3><%= @user.username %>'s Games</h3>
+
+<% @user.games.each do |game| %>
+    <ul>
+        <li><a href="/games/<%= game.id %>"><%= game.title %></a></li>
+    </ul>
+<% end %>
+
+<a href="/games/new"><button>New Game</button></a>
+
+<a href="/logout"><button>Log Out</button></a>
